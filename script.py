@@ -52,3 +52,6 @@ with open(output_csv, mode='w', newline='', encoding='utf-8') as f:
         row = {key: t.get(key, '') for key in fieldnames}
         writer.writerow(row)
 print(f'Wrote {len(tickers)} rows to {output_csv}')
+
+if __name__ == '__main__':
+    run_stock_job() # scheduler.py
